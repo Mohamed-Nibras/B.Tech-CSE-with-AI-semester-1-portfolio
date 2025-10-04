@@ -1,6 +1,6 @@
-print('\n' + "=" * 173 )
-print('\n' + 'PATTERN PRINTER'.center(173))
-print('\n' + "=" * 173 )
+print('\n' + "=" * 154 )
+print('\n' + 'PATTERN PRINTER'.center(154))
+print('\n' + "=" * 154 )
 
  
 all_patterns = [ ]
@@ -96,22 +96,22 @@ while True:
     
  elif pattern == 'Q':
    if  all_patterns != []:
-    print('\n' + "-" * 173 )
-    print('\n' + 'ALL PATTERNS PRINTED'.center(173))
-    print('\n' + "-" * 173 )
+    print('\n' + "-" * 154 )
+    print('\n' + 'ALL PATTERNS PRINTED'.center(154))
+    print('\n' + "-" * 154 )
     for stored in all_patterns:
        print(stored)
-    print('\n' + "=" * 173 )
-    print('\n' + 'EXITING....BYEEE 👋👋👋'.center(173))
-    print('\n' + "=" * 173 )
+    print('\n' + "=" * 154 )
+    print('\n' + 'EXITING....BYEEE 👋👋👋'.center(154))
+    print('\n' + "=" * 154 )
     break 
    else :
-       print('\n' + "-" * 173 )
-       print('\n' + 'NO PATTERNS PRINTED'.center(173))
-       print('\n' + "-" * 173 )
-       print('\n' + "=" * 173 )
-       print('\n' + 'EXITING....BYEEE 👋👋👋'.center(173))
-       print('\n' + "=" * 173 )
+       print('\n' + "-" * 154 )
+       print('\n' + 'NO PATTERNS PRINTED'.center(154))
+       print('\n' + "-" * 154 )
+       print('\n' + "=" * 154 )
+       print('\n' + 'EXITING....BYEEE 👋👋👋'.center(154))
+       print('\n' + "=" * 154 )
        break 
  else: 
     print('Enter Pattern correctly')
