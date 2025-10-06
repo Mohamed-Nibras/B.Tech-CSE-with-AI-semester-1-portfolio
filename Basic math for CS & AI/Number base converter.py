@@ -1,7 +1,7 @@
 #Title
 
 print('\n' + "~" * 154)
-print('\n' + "NUMBER BASE CONVERTOR".center(154) )
+print('\n' + "NUMBER BASE CONVERTER".center(154) )
 print('\n' + "~" * 154)
 
 all_base = [ ]
