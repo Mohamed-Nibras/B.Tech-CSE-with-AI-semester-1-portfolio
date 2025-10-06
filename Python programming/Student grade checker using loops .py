@@ -1,7 +1,7 @@
 #title 
-print('\n' + "=" * 173)
-print('\n'+'STUDENT GRADE CHECKER WITH PROGRESS CARD'.center(173,'-'))
-print('\n' + '=' * 173)
+print('\n' + "=" * 154)
+print('\n'+'STUDENT GRADE CHECKER WITH PROGRESS CARD'.center(154,'-'))
+print('\n' + '=' * 154)
 #name and grade
 
 name = input('\nEnter your name: ')
@@ -163,9 +163,9 @@ else:
 
 
 #final progress card 
-print('\n' + "=" * 173)
-print('\n'+'STUDENT PROGRESS CARD'.center(173,'-'))
-print('\n' + '=' * 173)
+print('\n' + "=" * 154)
+print('\n'+'STUDENT PROGRESS CARD'.center(154,'-'))
+print('\n' + '=' * 154)
 print(f'\nSTUDENT NAME: {name}')
 print(f'\nSTANDARD: {std}')
 if std in [11,12]:
