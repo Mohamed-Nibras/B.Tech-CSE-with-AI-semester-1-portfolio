@@ -1,9 +1,11 @@
 #title 
-print('\n' + "=" * 154)
-print('\n'+'STUDENT GRADE CHECKER WITH PROGRESS CARD'.center(154,'-'))
-print('\n' + '=' * 154)
-#name and grade
+import shutil
+width = shutil.get_terminal_size().columns
+print("-" * width)
+print('STUDENT GRADE CHECKER WITH PROGRESS CARD'.center(width))
+print('-' * width)
 
+#name and grade
 name = input('\nEnter your name: ')
 std = int(input('\nEnter your grade: '))
 schl = input('\nEnter your school name: ')
@@ -163,9 +165,10 @@ else:
 
 
 #final progress card 
-print('\n' + "=" * 154)
-print('\n'+'STUDENT PROGRESS CARD'.center(154,'-'))
-print('\n' + '=' * 154)
+
+print("-" * width)
+print("STUDENT PROGRESS CARD".center(width))
+print("-" * width)
 print(f'\nSTUDENT NAME: {name}')
 print(f'\nSTANDARD: {std}')
 if std in [11,12]:
