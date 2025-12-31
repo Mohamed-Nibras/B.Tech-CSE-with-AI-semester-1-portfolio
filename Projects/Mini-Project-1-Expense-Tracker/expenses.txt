@@ -1,2 +1,1 @@
-100,Food,Breakfast 
-140,Toy,Entertainment 
+2025-12-31,100,Food,Lunch

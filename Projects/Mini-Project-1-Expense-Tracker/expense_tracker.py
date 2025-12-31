@@ -6,44 +6,42 @@ print("=" * width)
 print("EXPENSE TRACKER 📊".center(width))
 print("=" * width)
 
-# Menu
-expenses = [ ]
+from datetime import date
+
 
 # Adding back data to list after restarting
-try:
-    with open("expenses.txt", "r") as file:
-        for line in file:
-            line = line.strip()
+def load_expenses():
+    expenses = []
+    try:
+        with open("expenses.txt", "r") as file:
+            for line in file:
+                line = line.strip()
 
-            if line:
-                amount, category, description = line.split(",")
-                expenses.append((amount, category, description))
+                if line:
+                    dat_val, amount, category, description = line.split(",")
+                    expenses.append((dat_val, amount, category, description))
 
-except FileNotFoundError:
-    pass
+    except FileNotFoundError:
+        pass
+
+    return expenses
 
 
-while True:
-    print("\n1. Add Expense")
-    print("2. View All Expenses")
-    print("3. View Total Spent")
-    print("4. Exit")
+def get_valid_choice():
+        while True:
+            choice = input("\nChoose an option: ")
+            if choice in ("1", "2", "3", "4"):
+                print("Your choice: ", choice)
+                return choice
 
-    # Choosing choice
-    while True:
-        choice = input("\nChoose an option: ")
-        if choice in ("1", "2", "3", "4"):
-            print("Your choice: ", choice)
-            break
+            else:
+                print("Invalid Choice❌...Choose 1, 2, 3, or 4")
 
-        else:
-            print("Invalid Choice❌...Choose 1, 2, 3, or 4")
-        
 
-    # Menu logic
-
-    if choice == "1":
+def add_expense(expenses):
+    
         print("Add Expense SELECTED ✅\n")
+        today = date.today().isoformat()
         while True:
             amount = input("Enter the Amount: ")
         
@@ -55,32 +53,54 @@ while True:
 
         category = input("Enter Category: ")
         description = input("Enter the Description: ")
-        expenses.append((amount, category, description))
-        print(f"\nExpense Added -> Amount: {amount} | Category: {category} | Description: {description} ")
+        expenses.append((today, amount, category, description))
+        print(f"\nExpense Added -> Date: {today} | Amount: {amount} | Category: {category} | Description: {description} ")
 
         with open("expenses.txt", "a") as file:
-            file.write(f"{amount},{category},{description} \n")
-        
+            file.write(f"{today},{amount},{category},{description}\n")
 
-    elif choice == "2":
+def view_expenses(expenses):
+    
         print("View All Expenses SELECTED ✅")
         if not expenses:
             print("No expenses added yet ! ")
 
         else: 
-            for amount, category, description in expenses:
-                print(f"\nExpenses -> Amount: {amount} | Category: {category} | Description: {description} ")
+            for date, amount, category, description in expenses:
+                print(f"\nExpenses -> Date: {date} | Amount: {amount} | Category: {category} | Description: {description} ")
 
-    elif choice == "3":
+def view_total_spent(expenses):
+     
         print("View Total Spent SELECTED ✅")
         total = 0
         if not expenses:
             print("No expenses added yet ! ")
 
         else:
-            for amount, category, description in expenses:
+            for _, amount, _, _ in expenses:
                 total += float(amount)
         print(f"\nTotal Amount Spent: INR. {total}")
+
+expenses = load_expenses()
+while True:
+    print("\n1. Add Expense")
+    print("2. View All Expenses")
+    print("3. View Total Spent")
+    print("4. Exit")
+
+    
+    choice = get_valid_choice()
+
+    if choice =="1":
+        add_expense(expenses)
+
+    elif choice == "2":
+        view_expenses(expenses)
+
+    elif choice == "3":
+         view_total_spent(expenses)    
+
+    
 
     elif choice == "4":
         print("Exiting....⌛")
