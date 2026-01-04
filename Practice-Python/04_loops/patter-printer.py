@@ -1,6 +1,8 @@
-print('\n' + "=" * 154 )
-print('\n' + 'PATTERN PRINTER'.center(154))
-print('\n' + "=" * 154 )
+import shutil
+width1 = shutil.get_terminal_size().columns #To analyze the terminal width
+print("-" * width1)
+print("PATTERN PRINTER".center(width1))
+print("-" * width1)
 
  
 all_patterns = [ ]
@@ -96,23 +98,27 @@ while True:
     
  elif pattern == 'Q':
    if  all_patterns != []:
-    print('\n' + "-" * 154 )
-    print('\n' + 'ALL PATTERNS PRINTED'.center(154))
-    print('\n' + "-" * 154 )
+    print('\n' + "-" * 173 )
+    print('\n' + 'ALL PATTERNS PRINTED'.center(173))
+    print('\n' + "-" * 173 )
     for stored in all_patterns:
        print(stored)
-    print('\n' + "=" * 154 )
-    print('\n' + 'EXITING....BYEEE 👋👋👋'.center(154))
-    print('\n' + "=" * 154 )
+    print('\n' + "=" * 173 )
+    print('\n' + 'EXITING....BYEEE 👋👋👋'.center(173))
+    print('\n' + "=" * 173 )
     break 
    else :
-       print('\n' + "-" * 154 )
-       print('\n' + 'NO PATTERNS PRINTED'.center(154))
-       print('\n' + "-" * 154 )
-       print('\n' + "=" * 154 )
-       print('\n' + 'EXITING....BYEEE 👋👋👋'.center(154))
-       print('\n' + "=" * 154 )
-       break 
+       
+        width2 = shutil.get_terminal_size().columns #To analyze the terminal width
+        print("-" * width2)
+        print("NO PATTERN PRINTED".center(width2))
+        print("-" * width2)
+        
+        width3 = shutil.get_terminal_size().columns
+        print("=" * width3)
+        print("EXITING THE PROGRAM...BYEE ✅".center(width2))
+        print("=" * width3)
+        break 
  else: 
     print('Enter Pattern correctly')
    
