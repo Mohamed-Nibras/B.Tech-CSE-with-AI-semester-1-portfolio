@@ -1,0 +1,3 @@
+number_guessing : 0
+math_quiz : 0
+number_puzzle : 0
