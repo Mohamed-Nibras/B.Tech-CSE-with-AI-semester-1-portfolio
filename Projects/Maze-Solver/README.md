@@ -102,6 +102,13 @@ Focused on building strong foundations in Algorithms & Problem Solving
 
 ---
 
+## 📸 Preview
+
+![Maze Output](Maze-output-1.png)
+![Maze Output](Maze-output-2.png)
+
+---
+
 ## 📌 Future Improvements
 
 - Add BFS (Shortest Path guaranteed)

@@ -1,7 +1,64 @@
 """
-Maze Solver using Recursion (Backtracking) + Play Mode
+🧩 Maze Solver (Recursion + Backtracking + Play Mode)
 
-Author: Mohamed Nibras
+This project is a command-line Maze Solver built using Depth First Search (DFS)
+and Recursion with Backtracking. It demonstrates how recursive algorithms explore
+multiple paths, track state, and backtrack to find valid solutions.
+
+------------------------------------------------------------
+🚀 Features
+------------------------------------------------------------
+- Automatic solving (One Path / All Paths)
+- Interactive Play Mode (manual movement + backtracking)
+- Random Maze Generation (size 4–6)
+- Prevents infinite loops using a visited matrix
+- Limits search using MAX_PATHS to avoid path explosion
+- Displays maze and paths visually in CLI
+- Shows statistics (total paths, shortest, longest)
+
+------------------------------------------------------------
+🧠 Concepts Used
+------------------------------------------------------------
+- Recursion
+- Backtracking
+- Depth First Search (DFS)
+- State Tracking (visited matrix)
+- Matrix Traversal
+- Input Validation
+- CLI Interaction Design
+
+------------------------------------------------------------
+🗺️ Maze Representation
+------------------------------------------------------------
+0  → Free path
+1  → Wall
+🔺 → Start
+📍 → Goal
+*  → Path
+
+------------------------------------------------------------
+⚙️ How It Works
+------------------------------------------------------------
+The algorithm starts from the top-left cell and explores all possible directions:
+Up, Down, Right, and Left.
+
+- Marks visited cells to avoid cycles
+- Backtracks when hitting walls or dead ends
+- Stores valid paths reaching the goal
+- Supports both single-path and all-path exploration
+
+In Play Mode:
+- User controls movement using W / A / S / D keys
+- 'B' allows manual backtracking
+
+------------------------------------------------------------
+👨‍💻 Author
+------------------------------------------------------------
+Mohamed Nibras
+B.Tech CSE (AI)
+
+Focused on building strong foundations in problem solving,
+algorithms, and software development.
 """
 
 import shutil
