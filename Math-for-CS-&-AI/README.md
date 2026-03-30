@@ -96,7 +96,3 @@ This repository represents a strong foundation in mathematical thinking required
 ## Summary
 
 This work reflects the transition from theoretical understanding to practical application of mathematics in computer science.
-
-## Author
-- Name: Mohamed Nibras S
-- Semester 1. , B.Tech CSE with AI
