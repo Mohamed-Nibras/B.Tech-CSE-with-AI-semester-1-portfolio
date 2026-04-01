@@ -1,4 +1,4 @@
-# 🧠 Logic Solver App – Mini Project 1
+# 🧠 Logic Solver App 
 
 A command-line based **Logic Solver App** built using Python.
 
