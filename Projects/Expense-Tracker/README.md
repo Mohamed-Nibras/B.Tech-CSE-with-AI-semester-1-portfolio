@@ -1,4 +1,4 @@
-# Expense Tracker (Mini Project 1)
+# Expense Tracker 
 
 A simple command-line based Expense Tracker built using Python.  
 This project allows users to record daily expenses, view past expenses, and calculate total spending with data stored persistently in a file.
