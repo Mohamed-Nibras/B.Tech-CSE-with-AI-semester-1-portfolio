@@ -36,7 +36,7 @@ class Student:
 students_list = []
 
 # -------------------- FILE HANDLING (CSV) --------------------
-def load_students():  # Runs once at program start ( line 236 )
+def load_students():  # Runs once at program start ( line 237 )
     # Loads student data from CSV into memory (students_list)
     try:
         with open("students.csv", "r", newline="") as file:
